@@ -1,0 +1,35 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - FirstTestFrameworks (0.0.1):
+    - FirstTestFrameworks/DataModel (= 0.0.1)
+    - FirstTestFrameworks/Request (= 0.0.1)
+  - FirstTestFrameworks/DataModel (0.0.1)
+  - FirstTestFrameworks/Request (0.0.1):
+    - AFNetworking (~> 3.1.0)
+
+DEPENDENCIES:
+  - FirstTestFrameworks (from `../../`)
+
+EXTERNAL SOURCES:
+  FirstTestFrameworks:
+    :path: ../../
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FirstTestFrameworks: 54d3bf124c4fe342944aa7ea97e1eda6d8d6a619
+
+COCOAPODS: 0.39.0

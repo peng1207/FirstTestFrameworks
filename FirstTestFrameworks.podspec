@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FirstTestFrameworks"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "第一个测试的framework"
 
   # This description is used to generate tags and improve search results.
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+		    第一版本的frameworks
                    DESC
 
   s.homepage     = "https://github.com/peng1207/FirstTestFrameworks"
@@ -90,11 +91,21 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "FirstTestFrameworks/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+#  s.source_files  = "FirstTestFrameworks/*.{h,m}"
+# s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
+    s.subspec "Request" do |request|
+        request.source_files = "FirstTestFrameworks/Request/**/*"
+        request.public_header_files = "FirstTestFrameworks/Request/**/*.h"
+        request.dependency "AFNetworking", "~> 3.1.0"
+    end
+
+    s.subspec "DataModel" do |dataModel|
+        dataModel.source_files = "FirstTestFrameworks/DataModel/**/*"
+        dataModel.public_header_files = "FirstTestFrameworks/DataModel/**/*.h"
+    end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -133,5 +144,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-	s.dependency "AFNetworking", "~> 3.1.0"
+  #	s.dependency "AFNetworking", "~> 3.1.0"
 end
