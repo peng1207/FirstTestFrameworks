@@ -1,6 +1,6 @@
 {
   "name": "FirstTestFrameworks",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "summary": "第一个测试的framework",
   "description": "第一版本的frameworks",
   "homepage": "https://github.com/peng1207/FirstTestFrameworks",
@@ -13,13 +13,12 @@
   },
   "source": {
     "git": "https://github.com/peng1207/FirstTestFrameworks.git",
-    "tag": "0.0.1"
+    "tag": "0.0.3"
   },
   "subspecs": [
     {
       "name": "Request",
       "source_files": "FirstTestFrameworks/Request/**/*",
-      "public_header_files": "FirstTestFrameworks/Request/**/*.h",
       "dependencies": {
         "AFNetworking": [
           "~> 3.1.0"
@@ -28,8 +27,7 @@
     },
     {
       "name": "DataModel",
-      "source_files": "FirstTestFrameworks/DataModel/**/*",
-      "public_header_files": "FirstTestFrameworks/DataModel/**/*.h"
+      "source_files": "FirstTestFrameworks/DataModel/**/*"
     }
   ]
 }

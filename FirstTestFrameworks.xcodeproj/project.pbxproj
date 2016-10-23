@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		64A137BD21711089C5B3046D /* libPods-FirstTestFrameworks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 700367684981EE7965FE2BB2 /* libPods-FirstTestFrameworks.a */; };
 		9E398D2C1DBC925800A7F725 /* FirstTestFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E398D2A1DBC925800A7F725 /* FirstTestFrameworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E398D861DBCAD1F00A7F725 /* TestModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E398D831DBCAD1F00A7F725 /* TestModel.h */; };
+		9E398D861DBCAD1F00A7F725 /* TestModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E398D831DBCAD1F00A7F725 /* TestModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E398D871DBCAD1F00A7F725 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E398D841DBCAD1F00A7F725 /* TestModel.m */; };
-		9E398D8A1DBCAD3000A7F725 /* RequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E398D881DBCAD3000A7F725 /* RequestManager.h */; };
+		9E398D8A1DBCAD3000A7F725 /* RequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E398D881DBCAD3000A7F725 /* RequestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E398D8B1DBCAD3000A7F725 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E398D891DBCAD3000A7F725 /* RequestManager.m */; };
 		9E398D8D1DBCAD4700A7F725 /* FirstTestFrameworks.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9E398D8C1DBCAD4700A7F725 /* FirstTestFrameworks.podspec */; };
 /* End PBXBuildFile section */
