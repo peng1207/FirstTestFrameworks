@@ -7,7 +7,7 @@
 //
 
 #import "RequestManager.h"
-#import <AFHTTPSessionManager.h>
+#import "AFNetworking.h"
 //#import <AFNetworking.h>
 @implementation RequestManager
 
