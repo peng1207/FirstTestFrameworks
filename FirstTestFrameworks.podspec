@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FirstTestFrameworks"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "第一个测试的framework"
 
   # This description is used to generate tags and improve search results.
@@ -99,7 +99,7 @@ Pod::Spec.new do |s|
     s.subspec "Request" do |request|
         request.source_files = "FirstTestFrameworks/Request/**/*"
 #request.public_header_files = "FirstTestFrameworks/Request/**/*.h"
-        request.dependency "AFNetworking", "~> 3.1.0"
+#   request.dependency "AFNetworking", "~> 3.1.0"
         request.dependency "Qiniu", "~> 7.1.2"
     end
 
