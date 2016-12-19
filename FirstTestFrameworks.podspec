@@ -97,7 +97,7 @@ Pod::Spec.new do |s|
   # s.public_header_files = "Classes/**/*.h"
 
     s.subspec "Request" do |request|
-request.source_files = "FirstTestFrameworks/Request/**/*","FirstTestFrameworks/Request/Controller/*.{h,m}","FirstTestFrameworks/Request/Model/*.{h,m}","FirstTestFrameworks/Request/View/*.{h,m}"
+request.source_files = "FirstTestFrameworks/Request/*.{h,m}","FirstTestFrameworks/Request/Controller/*.{h,m}","FirstTestFrameworks/Request/Model/*.{h,m}","FirstTestFrameworks/Request/View/*.{h,m}"
         request.public_header_files = "FirstTestFrameworks/Request/**/*.h"
         request.dependency "AFNetworking", "~> 3.1.0"
         request.dependency "Qiniu", "~> 7.1.2"
