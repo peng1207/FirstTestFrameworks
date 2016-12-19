@@ -98,7 +98,7 @@ Pod::Spec.new do |s|
 
     s.subspec "Request" do |request|
         request.source_files = "FirstTestFrameworks/Request/**/*"
-#request.public_header_files = "FirstTestFrameworks/Request/**/*.h"
+        request.public_header_files = "FirstTestFrameworks/Request/**/*.h"
         request.dependency "AFNetworking", "~> 3.1.0"
         request.dependency "Qiniu", "~> 7.1.2"
         request.dependency "HappyDNS", "~> 0.3.10"
@@ -106,7 +106,7 @@ Pod::Spec.new do |s|
 
     s.subspec "DataModel" do |dataModel|
         dataModel.source_files = "FirstTestFrameworks/DataModel/**/*"
-    #dataModel.public_header_files = "FirstTestFrameworks/DataModel/**/*.h"
+        dataModel.public_header_files = "FirstTestFrameworks/DataModel/**/*.h"
     end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -145,6 +145,6 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+   s.dependency "JSONKit", "~> 1.4"
   #	s.dependency "AFNetworking", "~> 3.1.0"
 end

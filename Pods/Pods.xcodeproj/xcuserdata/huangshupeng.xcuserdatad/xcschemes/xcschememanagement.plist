@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JSONKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FirstTestFrameworks.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3370BD307B765FEED07AB4BDC03A5991</key>
+		<key>53B2B897D64E4516E75AC86348B86622</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>928353533005A4198EBDA5B700D37B64</key>
+		<key>5AB34BCC2A5390C2CD01D674EE1EBAC0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BAC3BED8C3E2404334C1282610605746</key>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D0EA7BD0DF7B64D1D22AE99C93B3613D</key>
+		<key>BA8588E842EF45E05841FBEA7CDAD092</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0AFDFFEF4A65BC63123A9ADFFA31357</key>
 		<dict>
 			<key>primary</key>
 			<true/>
