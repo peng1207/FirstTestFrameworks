@@ -107,13 +107,13 @@ Pod::Spec.new do |s|
     con.public_header_files = "FirstTestFrameworks/Request/Controller/*.h"
     end
     request.subspec "Model" do |con|
-    con.source_files = "FirstTestFrameworks/Request/Model/*.{h,m}"
-    con.public_header_files = "FirstTestFrameworks/Request/Model/*.h"
+     con.source_files = "FirstTestFrameworks/Request/Model/*.{h,m}"
+     con.public_header_files = "FirstTestFrameworks/Request/Model/*.h"
     end
-    request.subspec "View" do |con|
+     request.subspec "View" do |con|
     con.source_files = "FirstTestFrameworks/Request/View/*.{h,m}"
-    con.public_header_files = "FirstTestFrameworks/Request/View/*.h"
-    end
+  con.public_header_files = "FirstTestFrameworks/Request/View/*.h"
+   end
     end
 
     s.subspec "DataModel" do |dataModel|

@@ -14,12 +14,33 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - FirstTestFrameworks (0.0.3):
-    - FirstTestFrameworks/DataModel (= 0.0.3)
-    - FirstTestFrameworks/Request (= 0.0.3)
-  - FirstTestFrameworks/DataModel (0.0.3)
-  - FirstTestFrameworks/Request (0.0.3):
+  - FirstTestFrameworks (0.1.5):
+    - FirstTestFrameworks/DataModel (= 0.1.5)
+    - FirstTestFrameworks/Request (= 0.1.5)
+  - FirstTestFrameworks/DataModel (0.1.5)
+  - FirstTestFrameworks/Request (0.1.5):
     - AFNetworking (~> 3.1.0)
+    - FirstTestFrameworks/Request/Controller (= 0.1.5)
+    - FirstTestFrameworks/Request/Model (= 0.1.5)
+    - FirstTestFrameworks/Request/View (= 0.1.5)
+    - HappyDNS (~> 0.3.10)
+    - Qiniu (~> 7.1.2)
+  - FirstTestFrameworks/Request/Controller (0.1.5):
+    - AFNetworking (~> 3.1.0)
+    - HappyDNS (~> 0.3.10)
+    - Qiniu (~> 7.1.2)
+  - FirstTestFrameworks/Request/Model (0.1.5):
+    - AFNetworking (~> 3.1.0)
+    - HappyDNS (~> 0.3.10)
+    - Qiniu (~> 7.1.2)
+  - FirstTestFrameworks/Request/View (0.1.5):
+    - AFNetworking (~> 3.1.0)
+    - HappyDNS (~> 0.3.10)
+    - Qiniu (~> 7.1.2)
+  - HappyDNS (0.3.10)
+  - Qiniu (7.1.4):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
 
 DEPENDENCIES:
   - FirstTestFrameworks (from `../../`)
@@ -30,6 +51,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  FirstTestFrameworks: ffb5f1d35c8dfd1be1e70e7cb17a2f6ad484bc80
+  FirstTestFrameworks: 4b77db692b962fd4bc577ff8008a12961cd9af40
+  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
+  Qiniu: a4c962782035ee25b9da3e195181d8c384bb75be
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 5ed767b4bcde61353782e5a3d24a4a96add43c98
+
+COCOAPODS: 1.1.1

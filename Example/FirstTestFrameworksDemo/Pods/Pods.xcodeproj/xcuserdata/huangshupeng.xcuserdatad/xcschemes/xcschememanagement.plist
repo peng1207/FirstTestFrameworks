@@ -14,7 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HappyDNS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FirstTestFrameworksDemo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Qiniu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
+		<key>59DFD42FACD7598A95E8A94B4C8C8882</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>73AE4EC25612CC143E6ACA2B9AACB106</key>
+		<key>5DE1923390F4C9FD4C32E21B6B6600C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>89E8E2CB42C4C30EB2BC00A264061ABC</key>
+		<key>828EDDF68455DEA97637B2FE443AC85F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C053567B549D006EBABB73DB7276147</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
