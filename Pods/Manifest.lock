@@ -22,7 +22,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
-  - JSONKit
+  - JSONKit (~> 1.4)
   - Qiniu (~> 7.1.2)
 
 SPEC CHECKSUMS:
@@ -31,6 +31,6 @@ SPEC CHECKSUMS:
   JSONKit: 5b69e804ea54d99293eed0fd2ce596c5703fefb0
   Qiniu: d57cb922b5c31f0d1cfe2c8fea3cf83997cdcf62
 
-PODFILE CHECKSUM: 48dafe7adda99ab4215c03c364c2aa189fe24acd
+PODFILE CHECKSUM: 2371cb22c3f06cff34957234738bc340ff7d8d8c
 
 COCOAPODS: 1.1.1

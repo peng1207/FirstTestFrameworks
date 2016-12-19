@@ -14,6 +14,12 @@
 		9E398D8A1DBCAD3000A7F725 /* RequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E398D881DBCAD3000A7F725 /* RequestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E398D8B1DBCAD3000A7F725 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E398D891DBCAD3000A7F725 /* RequestManager.m */; };
 		9E398D8D1DBCAD4700A7F725 /* FirstTestFrameworks.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9E398D8C1DBCAD4700A7F725 /* FirstTestFrameworks.podspec */; };
+		9EE35B6C1E084DF3004C7322 /* MyViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE35B6A1E084DF3004C7322 /* MyViewController.h */; };
+		9EE35B6D1E084DF3004C7322 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE35B6B1E084DF3004C7322 /* MyViewController.m */; };
+		9EE35B701E084E02004C7322 /* MyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE35B6E1E084E02004C7322 /* MyModel.h */; };
+		9EE35B711E084E02004C7322 /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE35B6F1E084E02004C7322 /* MyModel.m */; };
+		9EE35B741E084E1D004C7322 /* MyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE35B721E084E1D004C7322 /* MyView.h */; };
+		9EE35B751E084E1D004C7322 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE35B731E084E1D004C7322 /* MyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		9E398D881DBCAD3000A7F725 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
 		9E398D891DBCAD3000A7F725 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
 		9E398D8C1DBCAD4700A7F725 /* FirstTestFrameworks.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FirstTestFrameworks.podspec; sourceTree = "<group>"; };
+		9EE35B6A1E084DF3004C7322 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		9EE35B6B1E084DF3004C7322 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		9EE35B6E1E084E02004C7322 /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
+		9EE35B6F1E084E02004C7322 /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
+		9EE35B721E084E1D004C7322 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		9EE35B731E084E1D004C7322 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +96,40 @@
 		9E398D851DBCAD1F00A7F725 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				9EE35B651E084D4F004C7322 /* Controller */,
+				9EE35B661E084D4F004C7322 /* Model */,
+				9EE35B671E084D4F004C7322 /* View */,
 				9E398D881DBCAD3000A7F725 /* RequestManager.h */,
 				9E398D891DBCAD3000A7F725 /* RequestManager.m */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		9EE35B651E084D4F004C7322 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9EE35B6A1E084DF3004C7322 /* MyViewController.h */,
+				9EE35B6B1E084DF3004C7322 /* MyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9EE35B661E084D4F004C7322 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9EE35B6E1E084E02004C7322 /* MyModel.h */,
+				9EE35B6F1E084E02004C7322 /* MyModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9EE35B671E084D4F004C7322 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EE35B721E084E1D004C7322 /* MyView.h */,
+				9EE35B731E084E1D004C7322 /* MyView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A38D1D0AEA44664582EBB02D /* Pods */ = {
@@ -115,6 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E398D861DBCAD1F00A7F725 /* TestModel.h in Headers */,
+				9EE35B741E084E1D004C7322 /* MyView.h in Headers */,
+				9EE35B701E084E02004C7322 /* MyModel.h in Headers */,
+				9EE35B6C1E084DF3004C7322 /* MyViewController.h in Headers */,
 				9E398D2C1DBC925800A7F725 /* FirstTestFrameworks.h in Headers */,
 				9E398D8A1DBCAD3000A7F725 /* RequestManager.h in Headers */,
 			);
@@ -154,6 +199,7 @@
 				TargetAttributes = {
 					9E398D261DBC925800A7F725 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -224,8 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE35B6D1E084DF3004C7322 /* MyViewController.m in Sources */,
 				9E398D871DBCAD1F00A7F725 /* TestModel.m in Sources */,
 				9E398D8B1DBCAD3000A7F725 /* RequestManager.m in Sources */,
+				9EE35B711E084E02004C7322 /* MyModel.m in Sources */,
+				9EE35B751E084E1D004C7322 /* MyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7047A2BACCA4C0277FF79037 /* Pods-FirstTestFrameworks.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -343,6 +393,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangshp..FirstTestFrameworks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -350,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5268910FAD398F67335F373A /* Pods-FirstTestFrameworks.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -361,6 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangshp..FirstTestFrameworks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FirstTestFrameworks"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "第一个测试的framework"
 
   # This description is used to generate tags and improve search results.
@@ -97,7 +97,7 @@ Pod::Spec.new do |s|
   # s.public_header_files = "Classes/**/*.h"
 
     s.subspec "Request" do |request|
-        request.source_files = "FirstTestFrameworks/Request/**/*"
+request.source_files = "FirstTestFrameworks/Request/**/*","FirstTestFrameworks/Request/Controller/*.{h,m}","FirstTestFrameworks/Request/Model/*.{h,m}","FirstTestFrameworks/Request/View/*.{h,m}"
         request.public_header_files = "FirstTestFrameworks/Request/**/*.h"
         request.dependency "AFNetworking", "~> 3.1.0"
         request.dependency "Qiniu", "~> 7.1.2"
@@ -145,6 +145,6 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-   s.dependency "JSONKit", "~> 1.4"
+#s.dependency "JSONKit", "~> 1.4"
   #	s.dependency "AFNetworking", "~> 3.1.0"
 end
