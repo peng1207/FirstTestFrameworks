@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FirstTestFrameworks"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "第一个测试的framework"
 
   # This description is used to generate tags and improve search results.
@@ -97,13 +97,22 @@ Pod::Spec.new do |s|
   # s.public_header_files = "Classes/**/*.h"
 
     s.subspec "Request" do |request|
-        request.source_files = "FirstTestFrameworks/Request/**/*.{h,m}"
- request.public_header_files = "FirstTestFrameworks/Request/**/*.h"
+        request.source_files = "FirstTestFrameworks/Request/*.{h,m}"
+        request.public_header_files = "FirstTestFrameworks/Request/*.h"
         request.dependency "AFNetworking", "~> 3.1.0"
         request.dependency "Qiniu", "~> 7.1.2"
         request.dependency "HappyDNS", "~> 0.3.10"
     request.subspec "Controller" do |con|
      con.source_files = "FirstTestFrameworks/Request/Controller/*.{h,m}"
+    con.public_header_files = "FirstTestFrameworks/Request/Controller/*.h"
+    end
+    request.subspec "Model" do |con|
+    con.source_files = "FirstTestFrameworks/Request/Model/*.{h,m}"
+    con.public_header_files = "FirstTestFrameworks/Request/Model/*.h"
+    end
+    request.subspec "View" do |con|
+    con.source_files = "FirstTestFrameworks/Request/View/*.{h,m}"
+    con.public_header_files = "FirstTestFrameworks/Request/View/*.h"
     end
     end
 
