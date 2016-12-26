@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   QNUploadOption *qnUploadOption = [[QNUploadOption alloc] init];
-    NSLog(@"%@",qnUploadOption);
+   
+   
     // Do any additional setup after loading the view.
 }
 

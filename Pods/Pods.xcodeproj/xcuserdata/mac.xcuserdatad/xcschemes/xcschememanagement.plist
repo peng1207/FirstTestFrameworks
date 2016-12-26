@@ -14,27 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>HappyDNS.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>JSONKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-FirstTestFrameworks.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Qiniu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,12 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>584E0D398D5772E154A9685EC8117E4F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>75E11C592AAA3906E1478784385E6A89</key>
+		<key>560F72D4695D6D3DFB42D766F7222F0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,17 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9BF2EF8B45A2DE7EB0ACC88462CB322</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D0EA7BD0DF7B64D1D22AE99C93B3613D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E421B7471C420C1C227C435C434E45A9</key>
+		<key>C122ECB19BB5FD2336716FB827528F1C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

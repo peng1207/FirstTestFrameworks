@@ -1,6 +1,6 @@
 {
   "name": "FirstTestFrameworks",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "summary": "第一个测试的framework",
   "description": "第一版本的frameworks",
   "homepage": "https://github.com/peng1207/FirstTestFrameworks",
@@ -13,28 +13,29 @@
   },
   "source": {
     "git": "https://github.com/peng1207/FirstTestFrameworks.git",
-    "tag": "0.1.5"
+    "tag": "0.1.6"
+  },
+  "dependencies": {
+    "SDWebImage": [
+      "~>3.7.6"
+    ]
   },
   "subspecs": [
     {
       "name": "Request",
-      "source_files": "FirstTestFrameworks/Request/*.{h,m}",
-      "public_header_files": "FirstTestFrameworks/Request/*.h",
       "dependencies": {
         "AFNetworking": [
           "~> 3.1.0"
-        ],
-        "Qiniu": [
-          "~> 7.1.2"
-        ],
-        "HappyDNS": [
-          "~> 0.3.10"
         ]
       },
       "subspecs": [
         {
           "name": "Controller",
-          "source_files": "FirstTestFrameworks/Request/Controller/*.{h,m}",
+          "source_files": [
+            "FirstTestFrameworks/Request/Controller/*.{h,m}",
+            "FirstTestFrameworks/Request/*.{h,m}"
+          ],
+          "prefix_header_contents": "#import \"RequestHeader.h\"",
           "public_header_files": "FirstTestFrameworks/Request/Controller/*.h"
         },
         {
@@ -45,7 +46,12 @@
         {
           "name": "View",
           "source_files": "FirstTestFrameworks/Request/View/*.{h,m}",
-          "public_header_files": "FirstTestFrameworks/Request/View/*.h"
+          "public_header_files": "FirstTestFrameworks/Request/View/*.h",
+          "dependencies": {
+            "FirstTestFrameworks/Request/Model": [
+
+            ]
+          }
         }
       ]
     },
@@ -53,6 +59,29 @@
       "name": "DataModel",
       "source_files": "FirstTestFrameworks/DataModel/**/*",
       "public_header_files": "FirstTestFrameworks/DataModel/**/*.h"
+    },
+    {
+      "name": "DataBaseManager",
+      "source_files": "FirstTestFrameworks/DataBaseManager/*",
+      "public_header_files": "FirstTestFrameworks/DataBaseManager/*.h",
+      "dependencies": {
+        "MJExtension": [
+
+        ],
+        "FMDB": [
+
+        ]
+      }
+    },
+    {
+      "name": "RequestManager",
+      "source_files": "FirstTestFrameworks/RequestManager/*",
+      "public_header_files": "FirstTestFrameworks/RequestManager/*.h",
+      "dependencies": {
+        "AFNetworking": [
+
+        ]
+      }
     }
   ]
 }

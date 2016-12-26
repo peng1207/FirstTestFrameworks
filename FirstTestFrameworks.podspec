@@ -99,14 +99,12 @@ Pod::Spec.new do |s|
 # request.source_files = "FirstTestFrameworks/Request/*.{h,m}"
         request.dependency "AFNetworking", "~> 3.1.0"
 
-        request.dependency "HappyDNS", "~> 0.3.10"
-
 #      request.public_header_files = "FirstTestFrameworks/Request/*.h"
             request.subspec "Controller" do |con|
             con.source_files = "FirstTestFrameworks/Request/Controller/*.{h,m}","FirstTestFrameworks/Request/*.{h,m}"
             con.prefix_header_contents = '#import "RequestHeader.h"'
             con.public_header_files = "FirstTestFrameworks/Request/Controller/*.h"
-            con.dependency "Qiniu", "~> 7.1.2"
+            
         end
         request.subspec "Model" do |con|
 
@@ -130,6 +128,19 @@ Pod::Spec.new do |s|
     s.subspec "DataModel" do |dataModel|
         dataModel.source_files = "FirstTestFrameworks/DataModel/**/*"
         dataModel.public_header_files = "FirstTestFrameworks/DataModel/**/*.h"
+    end
+#数据库类的管理
+    s.subspec "DataBaseManager" do |db|
+        db.source_files  = "FirstTestFrameworks/DataBaseManager/*"
+        db.public_header_files = "FirstTestFrameworks/DataBaseManager/*.h"
+        db.dependency "MJExtension"
+        db.dependency "FMDB"
+    end
+#请求类的管理
+    s.subspec "RequestManager" do |request|
+        request.source_files = "FirstTestFrameworks/RequestManager/*"
+        request.public_header_files = "FirstTestFrameworks/RequestManager/*.h"
+        request.dependency "AFNetworking"
     end
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

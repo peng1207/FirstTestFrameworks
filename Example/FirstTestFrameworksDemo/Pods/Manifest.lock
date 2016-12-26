@@ -14,33 +14,44 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - FirstTestFrameworks (0.1.5):
-    - FirstTestFrameworks/DataModel (= 0.1.5)
-    - FirstTestFrameworks/Request (= 0.1.5)
-  - FirstTestFrameworks/DataModel (0.1.5)
-  - FirstTestFrameworks/Request (0.1.5):
+  - FirstTestFrameworks (0.1.6):
+    - FirstTestFrameworks/DataBaseManager (= 0.1.6)
+    - FirstTestFrameworks/DataModel (= 0.1.6)
+    - FirstTestFrameworks/Request (= 0.1.6)
+    - FirstTestFrameworks/RequestManager (= 0.1.6)
+    - SDWebImage (~> 3.7.6)
+  - FirstTestFrameworks/DataBaseManager (0.1.6):
+    - FMDB
+    - MJExtension
+    - SDWebImage (~> 3.7.6)
+  - FirstTestFrameworks/DataModel (0.1.6):
+    - SDWebImage (~> 3.7.6)
+  - FirstTestFrameworks/Request (0.1.6):
     - AFNetworking (~> 3.1.0)
-    - FirstTestFrameworks/Request/Controller (= 0.1.5)
-    - FirstTestFrameworks/Request/Model (= 0.1.5)
-    - FirstTestFrameworks/Request/View (= 0.1.5)
-    - HappyDNS (~> 0.3.10)
-    - Qiniu (~> 7.1.2)
-  - FirstTestFrameworks/Request/Controller (0.1.5):
+    - FirstTestFrameworks/Request/Controller (= 0.1.6)
+    - FirstTestFrameworks/Request/Model (= 0.1.6)
+    - FirstTestFrameworks/Request/View (= 0.1.6)
+    - SDWebImage (~> 3.7.6)
+  - FirstTestFrameworks/Request/Controller (0.1.6):
     - AFNetworking (~> 3.1.0)
-    - HappyDNS (~> 0.3.10)
-    - Qiniu (~> 7.1.2)
-  - FirstTestFrameworks/Request/Model (0.1.5):
+    - SDWebImage (~> 3.7.6)
+  - FirstTestFrameworks/Request/Model (0.1.6):
     - AFNetworking (~> 3.1.0)
-    - HappyDNS (~> 0.3.10)
-    - Qiniu (~> 7.1.2)
-  - FirstTestFrameworks/Request/View (0.1.5):
+    - SDWebImage (~> 3.7.6)
+  - FirstTestFrameworks/Request/View (0.1.6):
     - AFNetworking (~> 3.1.0)
-    - HappyDNS (~> 0.3.10)
-    - Qiniu (~> 7.1.2)
-  - HappyDNS (0.3.10)
-  - Qiniu (7.1.4):
-    - AFNetworking (~> 3)
-    - HappyDNS (~> 0.3)
+    - FirstTestFrameworks/Request/Model
+    - SDWebImage (~> 3.7.6)
+  - FirstTestFrameworks/RequestManager (0.1.6):
+    - AFNetworking
+    - SDWebImage (~> 3.7.6)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - MJExtension (3.0.13)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
 
 DEPENDENCIES:
   - FirstTestFrameworks (from `../../`)
@@ -51,9 +62,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  FirstTestFrameworks: 4b77db692b962fd4bc577ff8008a12961cd9af40
-  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
-  Qiniu: a4c962782035ee25b9da3e195181d8c384bb75be
+  FirstTestFrameworks: 9a7a885ae1f0af510330b5a3fa9b662e79a91fe4
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
 
 PODFILE CHECKSUM: 5ed767b4bcde61353782e5a3d24a4a96add43c98
 
