@@ -7,7 +7,7 @@
 //
 
 #import "MyViewController.h"
-
+#import "RequestHeader.h"
 @interface MyViewController ()
 
 @end
@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [RequestManager loadRequest];
+   QNUploadOption *qnUploadOption = [[QNUploadOption alloc] init];
+    NSLog(@"%@",qnUploadOption);
     // Do any additional setup after loading the view.
 }
 

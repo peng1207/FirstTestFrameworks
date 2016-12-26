@@ -96,16 +96,17 @@ Pod::Spec.new do |s|
 
 
     s.subspec "Request" do |request|
-#    request.source_files = "FirstTestFrameworks/Request/*.{h,m}"
+# request.source_files = "FirstTestFrameworks/Request/*.{h,m}"
         request.dependency "AFNetworking", "~> 3.1.0"
-        request.dependency "Qiniu", "~> 7.1.2"
+
         request.dependency "HappyDNS", "~> 0.3.10"
 
 #      request.public_header_files = "FirstTestFrameworks/Request/*.h"
-        request.subspec "Controller" do |con|
+            request.subspec "Controller" do |con|
             con.source_files = "FirstTestFrameworks/Request/Controller/*.{h,m}","FirstTestFrameworks/Request/*.{h,m}"
             con.prefix_header_contents = '#import "RequestHeader.h"'
-            con.public_header_files = "FirstTestFrameworks/Request/Controller/*.h","FirstTestFrameworks/Request/*.h"
+            con.public_header_files = "FirstTestFrameworks/Request/Controller/*.h"
+            con.dependency "Qiniu", "~> 7.1.2"
         end
         request.subspec "Model" do |con|
 

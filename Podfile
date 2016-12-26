@@ -8,5 +8,7 @@ pod 'AFNetworking', '~> 3.1.0'
 pod 'Qiniu', '~> 7.1.2'
 pod 'JSONKit','~> 1.4'
 pod 'SDWebImage','~>3.7.6'
+pod 'FMDB'
+pod 'MJExtension'
 end
 
