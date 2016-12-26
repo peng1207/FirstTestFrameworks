@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MyModel.h"
 @interface MyView : UIView
 
 @end

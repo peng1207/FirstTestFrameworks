@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FirstTestFrameworks"
-  s.version      = "0.1.5"
+  s.version      = "0.1.6"
   s.summary      = "第一个测试的framework"
 
   # This description is used to generate tags and improve search results.
@@ -94,26 +94,36 @@ Pod::Spec.new do |s|
 #  s.source_files  = "FirstTestFrameworks/*.{h,m}"
 # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
 
     s.subspec "Request" do |request|
-        request.source_files = "FirstTestFrameworks/Request/*.{h,m}"
-        request.public_header_files = "FirstTestFrameworks/Request/*.h"
+#    request.source_files = "FirstTestFrameworks/Request/*.{h,m}"
         request.dependency "AFNetworking", "~> 3.1.0"
         request.dependency "Qiniu", "~> 7.1.2"
         request.dependency "HappyDNS", "~> 0.3.10"
-    request.subspec "Controller" do |con|
-     con.source_files = "FirstTestFrameworks/Request/Controller/*.{h,m}"
-    con.public_header_files = "FirstTestFrameworks/Request/Controller/*.h"
-    end
-    request.subspec "Model" do |con|
-     con.source_files = "FirstTestFrameworks/Request/Model/*.{h,m}"
-     con.public_header_files = "FirstTestFrameworks/Request/Model/*.h"
-    end
-     request.subspec "View" do |con|
-    con.source_files = "FirstTestFrameworks/Request/View/*.{h,m}"
-  con.public_header_files = "FirstTestFrameworks/Request/View/*.h"
-   end
+
+#      request.public_header_files = "FirstTestFrameworks/Request/*.h"
+        request.subspec "Controller" do |con|
+            con.source_files = "FirstTestFrameworks/Request/Controller/*.{h,m}","FirstTestFrameworks/Request/*.{h,m}"
+            con.prefix_header_contents = '#import "RequestHeader.h"'
+            con.public_header_files = "FirstTestFrameworks/Request/Controller/*.h","FirstTestFrameworks/Request/*.h"
+        end
+        request.subspec "Model" do |con|
+
+            con.source_files = "FirstTestFrameworks/Request/Model/*.{h,m}"
+
+                con.public_header_files = "FirstTestFrameworks/Request/Model/*.h"
+
+        end
+
+        request.subspec "View" do |con|
+
+            con.source_files = "FirstTestFrameworks/Request/View/*.{h,m}"
+
+            con.public_header_files = "FirstTestFrameworks/Request/View/*.h"
+
+            con.dependency "FirstTestFrameworks/Request/Model"
+
+        end
     end
 
     s.subspec "DataModel" do |dataModel|
@@ -157,6 +167,6 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-#s.dependency "JSONKit", "~> 1.4"
+    s.dependency "SDWebImage", "~>3.7.6"
   #	s.dependency "AFNetworking", "~> 3.1.0"
 end

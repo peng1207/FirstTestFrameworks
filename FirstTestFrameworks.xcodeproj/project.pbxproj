@@ -23,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04145D641E0E8F4200CD4573 /* RequestHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestHeader.h; sourceTree = "<group>"; };
+		04EDAB161E10B1B00043245B /* FirstTestFrameworks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstTestFrameworks-Prefix.pch"; sourceTree = "<group>"; };
 		471916E20D03E5F3B92718F0 /* libPods-FirstTestFrameworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FirstTestFrameworks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5268910FAD398F67335F373A /* Pods-FirstTestFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTestFrameworks.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTestFrameworks/Pods-FirstTestFrameworks.release.xcconfig"; sourceTree = "<group>"; };
 		7047A2BACCA4C0277FF79037 /* Pods-FirstTestFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTestFrameworks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTestFrameworks/Pods-FirstTestFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,8 @@
 				9EE35B671E084D4F004C7322 /* View */,
 				9E398D881DBCAD3000A7F725 /* RequestManager.h */,
 				9E398D891DBCAD3000A7F725 /* RequestManager.m */,
+				04145D641E0E8F4200CD4573 /* RequestHeader.h */,
+				04EDAB161E10B1B00043245B /* FirstTestFrameworks-Prefix.pch */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -387,6 +391,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "FirstTestFrameworks/Request/FirstTestFrameworks-Prefix.pch";
 				INFOPLIST_FILE = FirstTestFrameworks/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -408,6 +413,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "FirstTestFrameworks/Request/FirstTestFrameworks-Prefix.pch";
 				INFOPLIST_FILE = FirstTestFrameworks/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

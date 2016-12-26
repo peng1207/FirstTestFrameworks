@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface RequestManager : NSObject
-
++ (void)loadRequest;
 @end

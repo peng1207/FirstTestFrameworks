@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 @implementation RequestManager
 
-- (void)loadRequest{
++ (void)loadRequest{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
     sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];

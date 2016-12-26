@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [RequestManager loadRequest];
     // Do any additional setup after loading the view.
 }
 

@@ -1,0 +1,11 @@
+//
+//  FirstTestFrameworks-Prefix.pch
+//  FirstTestFrameworks
+//
+//  Created by Mac on 16/12/26.
+//  Copyright © 2016年 huangshupeng. All rights reserved.
+//
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import "RequestHeader.h"
+#endif
