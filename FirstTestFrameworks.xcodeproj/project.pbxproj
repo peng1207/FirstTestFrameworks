@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0477F6921E10E95D00BF670C /* OkDataBaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0477F6901E10E95D00BF670C /* OkDataBaseManager.h */; };
 		0477F6931E10E95D00BF670C /* OkDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477F6911E10E95D00BF670C /* OkDataBaseManager.m */; };
+		0477F6961E11159200BF670C /* OkRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0477F6941E11159200BF670C /* OkRequestManager.h */; };
+		0477F6971E11159200BF670C /* OkRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477F6951E11159200BF670C /* OkRequestManager.m */; };
 		828355F3DF7381951451A44D /* libPods-FirstTestFrameworks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 471916E20D03E5F3B92718F0 /* libPods-FirstTestFrameworks.a */; };
 		9E398D2C1DBC925800A7F725 /* FirstTestFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E398D2A1DBC925800A7F725 /* FirstTestFrameworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E398D861DBCAD1F00A7F725 /* TestModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E398D831DBCAD1F00A7F725 /* TestModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +30,8 @@
 		04145D641E0E8F4200CD4573 /* RequestHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestHeader.h; sourceTree = "<group>"; };
 		0477F6901E10E95D00BF670C /* OkDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkDataBaseManager.h; sourceTree = "<group>"; };
 		0477F6911E10E95D00BF670C /* OkDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OkDataBaseManager.m; sourceTree = "<group>"; };
+		0477F6941E11159200BF670C /* OkRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OkRequestManager.h; sourceTree = "<group>"; };
+		0477F6951E11159200BF670C /* OkRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OkRequestManager.m; sourceTree = "<group>"; };
 		471916E20D03E5F3B92718F0 /* libPods-FirstTestFrameworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FirstTestFrameworks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5268910FAD398F67335F373A /* Pods-FirstTestFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTestFrameworks.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTestFrameworks/Pods-FirstTestFrameworks.release.xcconfig"; sourceTree = "<group>"; };
 		7047A2BACCA4C0277FF79037 /* Pods-FirstTestFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTestFrameworks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTestFrameworks/Pods-FirstTestFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 		0477F68F1E10E85D00BF670C /* RequestManager */ = {
 			isa = PBXGroup;
 			children = (
+				0477F6941E11159200BF670C /* OkRequestManager.h */,
+				0477F6951E11159200BF670C /* OkRequestManager.m */,
 			);
 			path = RequestManager;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 				9EE35B701E084E02004C7322 /* MyModel.h in Headers */,
 				9EE35B6C1E084DF3004C7322 /* MyViewController.h in Headers */,
 				9E398D2C1DBC925800A7F725 /* FirstTestFrameworks.h in Headers */,
+				0477F6961E11159200BF670C /* OkRequestManager.h in Headers */,
 				9E398D8A1DBCAD3000A7F725 /* RequestManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +226,7 @@
 		9E398D1E1DBC925800A7F725 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = Ok;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = huangshupeng;
 				TargetAttributes = {
@@ -297,6 +305,7 @@
 			files = (
 				9EE35B6D1E084DF3004C7322 /* MyViewController.m in Sources */,
 				9E398D871DBCAD1F00A7F725 /* TestModel.m in Sources */,
+				0477F6971E11159200BF670C /* OkRequestManager.m in Sources */,
 				0477F6931E10E95D00BF670C /* OkDataBaseManager.m in Sources */,
 				9E398D8B1DBCAD3000A7F725 /* RequestManager.m in Sources */,
 				9EE35B711E084E02004C7322 /* MyModel.m in Sources */,

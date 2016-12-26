@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0477F69A1E111B0400BF670C /* TestDataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477F6991E111B0400BF670C /* TestDataBaseModel.m */; };
 		6BB8DE10F7797DC450EB3082 /* Pods_FirstTestFrameworksDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A370326CC452637E3B4928E /* Pods_FirstTestFrameworksDemo.framework */; };
 		9E398D661DBC9D7D00A7F725 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E398D651DBC9D7D00A7F725 /* main.m */; };
 		9E398D691DBC9D7D00A7F725 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E398D681DBC9D7D00A7F725 /* AppDelegate.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0477F6981E111B0400BF670C /* TestDataBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataBaseModel.h; sourceTree = "<group>"; };
+		0477F6991E111B0400BF670C /* TestDataBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataBaseModel.m; sourceTree = "<group>"; };
 		1ADCECE007876BAEAC046069 /* Pods-FirstTestFrameworksDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstTestFrameworksDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstTestFrameworksDemo/Pods-FirstTestFrameworksDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2A370326CC452637E3B4928E /* Pods_FirstTestFrameworksDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstTestFrameworksDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E398D611DBC9D7D00A7F725 /* FirstTestFrameworksDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstTestFrameworksDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,8 @@
 				9E398D681DBC9D7D00A7F725 /* AppDelegate.m */,
 				9E398D6A1DBC9D7D00A7F725 /* ViewController.h */,
 				9E398D6B1DBC9D7D00A7F725 /* ViewController.m */,
+				0477F6981E111B0400BF670C /* TestDataBaseModel.h */,
+				0477F6991E111B0400BF670C /* TestDataBaseModel.m */,
 				9E398D6D1DBC9D7D00A7F725 /* Main.storyboard */,
 				9E398D731DBC9D7D00A7F725 /* Assets.xcassets */,
 				9E398D751DBC9D7D00A7F725 /* LaunchScreen.storyboard */,
@@ -140,6 +145,7 @@
 				TargetAttributes = {
 					9E398D601DBC9D7D00A7F725 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2X8ED8ZMS2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -229,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E398D6C1DBC9D7D00A7F725 /* ViewController.m in Sources */,
+				0477F69A1E111B0400BF670C /* TestDataBaseModel.m in Sources */,
 				9E398D691DBC9D7D00A7F725 /* AppDelegate.m in Sources */,
 				9E398D721DBC9D7D00A7F725 /* FirstTestFrameworksDemo.xcdatamodeld in Sources */,
 				9E398D661DBC9D7D00A7F725 /* main.m in Sources */,
@@ -350,6 +357,7 @@
 			baseConfigurationReference = B27F75C2CCA82A7AFFB183F2 /* Pods-FirstTestFrameworksDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2X8ED8ZMS2;
 				INFOPLIST_FILE = FirstTestFrameworksDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangshp..FirstTestFrameworksDemo;
@@ -362,6 +370,7 @@
 			baseConfigurationReference = 1ADCECE007876BAEAC046069 /* Pods-FirstTestFrameworksDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2X8ED8ZMS2;
 				INFOPLIST_FILE = FirstTestFrameworksDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangshp..FirstTestFrameworksDemo;
@@ -388,6 +397,7 @@
 				9E398D7D1DBC9D7D00A7F725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

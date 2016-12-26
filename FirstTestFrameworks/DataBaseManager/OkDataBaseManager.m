@@ -43,7 +43,10 @@
  */
 - (void)creatDatabase{
     if (!_db) {
-        _db = [FMDatabase databaseWithPath:@""];
+        // 一般保存到cache目录里面
+        NSString *dataPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+         dataPath = [dataPath stringByAppendingPathComponent:@"okdeerData.db"];
+        _db = [FMDatabase databaseWithPath:dataPath];
     }
 }
 /**
@@ -82,9 +85,7 @@
         // 创建表  只创建一个主键
         NSString *tableName = [self getTableNameToModel:class];
         [self.db executeUpdate:[NSString stringWithFormat:@"create table if not exists %@ (id INTEGER PRIMARY KEY AUTOINCREMENT)",tableName]];
-        id model = [[class alloc]init];
-        NSDictionary *keyValue = [model mj_keyValues];
-        for (NSString *key in keyValue.allKeys) {
+        for (NSString *key in  [self getAllPropertyNames:class]) {
             [self addTableColumn:key table:tableName];
         }
     }
@@ -147,9 +148,9 @@
 - (void)insertToModel:(id)model{
     if (model) {
         Class class = [model class];
-        [self creatTable:class];
         [self creatDatabase];
         [self openDatabase];
+        [self creatTable:class];
         //格式化插入sql语句
         NSString * sql = @"insert into %@ (%@) values(%@)";
         NSDictionary *keyValueDic = [model mj_keyValues];
@@ -157,16 +158,18 @@
         NSArray *keyArray = [keyValueDic allKeys];
         NSString * namelist = [keyArray componentsJoinedByString:@","];
         NSMutableString * valuelist = [NSMutableString string];
+        
         for (NSInteger i = 0 ; i < keyArray.count; i++) {
             if (i==0) {
-                [valuelist appendFormat:@"?"];
+                [valuelist appendFormat:keyValueDic[keyArray[i]]];
             }else{
-                [valuelist appendFormat:@",?"];
+                [valuelist appendFormat:@",%@",keyValueDic[keyArray[i]]];
             }
         }
          //格式化最终的插入语句
-        sql = [NSString stringWithFormat:sql,class,namelist,valuelist];
-        [_db executeQuery:sql withArgumentsInArray:[keyValueDic allValues]];
+        sql = [NSString stringWithFormat:sql,[self getTableNameToModel:class],namelist,valuelist];
+        BOOL sussess = [_db executeUpdate:sql];
+        NSLog(@"insert status is %d",sussess);
         [self closeDatabase];
     }
 }
@@ -200,6 +203,9 @@
  */
 - (NSArray *)selectArray:(NSInteger)startIndex count:(NSInteger)count modelClass:(Class)modelClass where:(NSString *)where{
     if (modelClass) {
+        [self creatDatabase];
+        [self openDatabase];
+        
         NSMutableArray *dataArray = [[NSMutableArray alloc] init];
         //查询指定表中从startindex条记录开始的count条记录
         NSString * sql = @"select %@ from %@";
@@ -208,17 +214,16 @@
             sql = [sql stringByAppendingFormat:@" where %@", where];//where是段名
         }
         //如果需要读取限制
-        if (count!=0) {
+        if (count > 0 ) {
             sql = [sql stringByAppendingFormat:@" limit %ld,%ld", (long)startIndex, (long)count];
         }
         id model = [[modelClass alloc] init];
         //获得查询的字段列表字符串
-        NSDictionary * dict = [model mj_keyValues];
-         NSString * namelist = [[dict allKeys] componentsJoinedByString:@","];
+         NSString * namelist = [[self getAllPropertyNames:modelClass] componentsJoinedByString:@","];
         //格式化查询语句
         sql = [NSString stringWithFormat:sql,namelist,[self getTableNameToModel:modelClass]];
         //执行查询
-        FMResultSet * rs = [_db executeQuery:sql];;
+        FMResultSet * rs = [_db executeQuery:sql];
         //便利结果集，一次或得一条记录
         while ([rs next]) {
             //获得当前记录数据字典
@@ -229,6 +234,9 @@
             if (newModel) {
                 [dataArray addObject:newModel];
             }
+        }
+        if (dataArray.count == 0) {
+            NSLog(@"error is %@",[_db lastErrorMessage]);
         }
         return dataArray;
     }else{
@@ -242,7 +250,18 @@
  @param where 条件语句 例如 key = value and key1 = value1
  */
 - (void)deleteToModel:(id)model where:(NSString *)where{
-    
+    if (model) {
+        [self creatDatabase];
+        [self openDatabase];
+        NSString * sql = @"delete from %@";
+        if (where && [where isKindOfClass:[NSString class]] && where.length) {
+            sql = [sql stringByAppendingFormat:@"where %@", where];
+        }
+        sql = [NSString stringWithFormat:sql,[self getTableNameToModel:[model class]]];
+       BOOL sussess = [_db executeUpdate:[NSString stringWithFormat:sql]];
+        NSLog(@"delete status is %d",sussess);
+        [self closeDatabase];
+    }
 }
 /**
  更新数据
@@ -251,7 +270,60 @@
  @param where 条件语句 例如 key = value and key1 = value1
  */
 - (void)updataToModel:(id)model where:(NSString *)where{
+    if (model && where && [where isKindOfClass:[NSString class]] && where.length) {
+        [self creatDatabase];
+        [self openDatabase];
+        NSString *sql = @"update %@ set %@";
+        if (where) {
+            sql = [sql stringByAppendingFormat:@" where %@",where];
+        }
+        NSMutableString *nameList = [[NSMutableString alloc] init];
+        NSDictionary *dic = [model mj_keyValues];
+        for (NSString *key in [dic allKeys]) {
+            id value = dic[key];
+            if (nameList.length) {
+               [nameList appendFormat:@",%@ = '%@'",key,value];
+            }else{
+                [nameList appendFormat:@"%@ = '%@'",key,value];
+            }
+        }
+        sql = [NSString stringWithFormat:sql,[self getTableNameToModel:[model class]],nameList];
+        BOOL success = [_db executeUpdate:sql];
+        NSLog(@"update status is %d",success);
+        [self closeDatabase];
+    }
+}
+
+/**
+ 通过运行时获取当前对象的所有属性的名称，以数组的形式返回
+
+ @param class class
+ @return 对应的属性
+ */
+- (NSArray *)getAllPropertyNames:(Class)class{
+    ///存储所有的属性名称
+    NSMutableArray *allNames = [[NSMutableArray alloc] init];
     
+    ///存储属性的个数
+    unsigned int propertyCount = 0;
+    
+    ///通过运行时获取当前类的属性
+    objc_property_t *propertys = class_copyPropertyList(class, &propertyCount);
+    
+    //把属性放到数组中
+    for (int i = 0; i < propertyCount; i ++) {
+        ///取出第一个属性
+        objc_property_t property = propertys[i];
+        
+        const char * propertyName = property_getName(property);
+        
+        [allNames addObject:[NSString stringWithUTF8String:propertyName]];
+    }
+    
+    ///释放
+    free(propertys);
+    
+    return allNames;
 }
 #pragma mark - //****************** 外部调用的方法 ******************//
 /**
